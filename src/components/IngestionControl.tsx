@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { PlayIcon, StopIcon, LoaderIcon } from "lucide-react";
+import { PlayIcon, XIcon, LoaderIcon } from "lucide-react";
 
 interface IngestionControlProps {
   onStartIngestion: () => void;
@@ -65,7 +64,7 @@ const IngestionControl: React.FC<IngestionControlProps> = ({
             variant="destructive" 
             onClick={onStopIngestion}
           >
-            <StopIcon className="mr-2 h-4 w-4" />
+            <XIcon className="mr-2 h-4 w-4" />
             Stop Ingestion
           </Button>
         ) : (
